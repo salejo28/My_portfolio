@@ -1,0 +1,156 @@
+.bars {
+    position: absolute;
+    background: transparent;
+    width: 50px;
+    height: 50px;
+    right: 20px;
+    top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    z-index: 1000;
+    transition: all .5s ease-in-out;
+}
+
+.bars .bar {
+    width: 45px;
+    background: #000;
+    height: 6px;
+    border-radius: 5px;
+    transition: .5s ease all;
+}
+
+.bar::before,
+.bar::after {
+    content: '';
+    position: absolute;
+    width: 45px;
+    height: 6px;
+    background: #000;
+    border-radius: 6px;
+    transition: all .5s ease-in-out;
+}
+
+.bar::before {
+    transform: translateY(-16px);
+}
+
+.bar::after {
+    transform: translateY(16px);
+}
+
+.bars.open .bar {
+    transform: translateX(-50px);
+    background: transparent;
+}
+
+.bars.open .bar::before {
+    background: #fff;
+    transform: rotate(45deg) translate(35px, -35px);
+}
+
+.bars.open .bar::after {
+    background: #fff;
+    transform: rotate(-45deg) translate(35px, 35px);
+}
+
+/* Nav */
+.nav {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: #000;
+    display: grid;
+    top: -100%;
+    grid-template-columns: repeat(2, 1fr);
+    z-index: 100;
+    overflow: hidden;
+    transition: all .5s ease-in-out;
+}
+
+.nav.open {
+    top: 0;
+}
+
+.img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.nav .links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav .links ul {
+    position: relative;
+}
+
+.nav .links ul li {
+    position: relative;
+    list-style: none;
+    padding: 0 20px;
+    margin: 10px 0;
+    overflow: hidden;
+    display: table;
+}
+
+.nav .links ul li a {
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    font-size: 4em;
+    font-weight: 700;
+    line-height: 1em;
+    padding-top: 12px;
+    display: inline-block;
+    text-transform: uppercase;
+    transition: .5s ease-in-out;
+}
+
+.nav .links ul li::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #ff0047;
+    transition: transform .5s ease-in-out;
+    transform: scaleY(0);
+    transform-origin: bottom;
+}
+
+.nav .links ul li:hover::before {
+    transition: transform .5s ease-in-out;
+    transform: scaleY(1);
+    transform-origin: top;
+}
+
+.nav .links ul li a::before {
+    content: attr(data-text);
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    color: #fff;
+}
+
+.nav .links ul li:hover a {
+    transform: translateY(-100%);
+    color: #fff;
+}
+
+@media screen and (max-width: 960px) {
+    .nav {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .img_content_nav {
+        display: none;
+    }
+    .nav .links ul li a {
+        font-size: 3em;
+    }
+}

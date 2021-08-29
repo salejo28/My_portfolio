@@ -1,0 +1,78 @@
+[
+    {
+        "frameworks": [
+            {
+                "backend": [
+                    {
+                        "skill": "Express",
+                        "percent": 70 
+                    },
+                    {
+                        "skill": "Nest JS",
+                        "percent": 40 
+                    },
+                    {
+                        "skill": "Mux",
+                        "percent": 40 
+                    },
+                    {
+                        "skill": "Flask",
+                        "percent": 40 
+                    },
+                    {
+                        "skill": "Laravel",
+                        "percent": 50 
+                    },
+                    {
+                        "skill": "Codeigniter",
+                        "percent": 60 
+                    }
+                ]       
+            },
+            {
+                "frontend": [
+                    {
+                        "skill": "Vue Js",
+                        "percent": 40 
+                    },
+                    {
+                        "skill": "React Js",
+                        "percent": 65
+                    },
+                    {
+                        "skill": "Angular",
+                        "percent": 40
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "languages": [
+            {
+                "language": "Javascript",
+                "percent": 70
+            },
+            {
+                "language": "Golang",
+                "percent": 45
+            },
+            {
+                "language": "Python",
+                "percent": 45
+            },
+            {
+                "language": "PHP",
+                "percent": 65
+            },
+            {
+                "language": "HTML",
+                "percent": 70
+            },
+            {
+                "language": "CSS",
+                "percent": 70
+            }
+        ]
+    }
+]
